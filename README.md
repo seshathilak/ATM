@@ -1,7 +1,7 @@
 # ATM
-#MINI PROJECT 
 
 
-java Learning purpose mini project!
+
+#Java Learning purpose mini project!
 
 
