@@ -11,6 +11,12 @@ public class Bank {
 
     private ArrayList<Account> accounts;
 
+    public Bank(String name) {
+        this.name = name;
+        this.users = new ArrayList<User>();
+        this.accounts = new ArrayList<Account>();
+    }
+
     public String getNewUserUUId() {
         String uuid;
         Random rng = new Random();
@@ -91,5 +97,10 @@ public class Bank {
         }
         // if we havnt found the user or the pin is incorrect pin return null
         return null;
+    }
+
+    public String getName() {
+        return this.name;
+
     }
 }

@@ -38,7 +38,7 @@ public class User {
         this.accounts = new ArrayList<Account>();
 
         // log Message
-        System.out.printf("New user %S %s with ID %s created .\n", lastName, firstName, this.uuid);
+        System.out.printf("New user %s %s with ID %s created .\n", lastName, firstName, this.uuid);
 
     }
 
@@ -61,5 +61,37 @@ public class User {
             System.exit(1);
         }
         return false;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public void printAccountsSummary() {
+        System.out.printf("\n\n%s's accounts summary\n", this.firstName);
+        for (int a = 0; a < this.accounts.size(); a++) {
+            System.out.printf("   %d) %s\n", a + 1, this.accounts.get(a).getSummaryLine());
+        }
+        System.out.println();
+    }
+
+    public int numaccounts() {
+        return this.accounts.size();
+    }
+
+    public void printAccTransHistory(int acctIdx) {
+        this.accounts.get(acctIdx).printTransHistory();
+    }
+
+    public double getAcctBalance(int acctIdx) {
+        return this.accounts.get(acctIdx).getBalance();
+    }
+
+    public String getAcctUUID(int accIdx) {
+        return this.accounts.get(accIdx).getUUID();
+    }
+
+    public void addAcctTransaction(int acctIdx, double amount, String memo) {
+        this.accounts.get(acctIdx).addTransaction(amount, memo);
     }
 }
