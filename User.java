@@ -38,7 +38,7 @@ public class User {
         this.accounts = new ArrayList<Account>();
 
         // log Message
-        System.out.printf("New user %s %s with ID %s created .\n", lastName, firstName, this.uuid);
+        System.out.printf("\n\n\nNew user %s %s with ID %s created .\n", this.lastName, firstName, this.uuid);
 
     }
 
